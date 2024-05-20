@@ -1,0 +1,21 @@
+eureka:
+  instance:
+    hostname: localhost
+    port: 8761
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+#    register-with-eureka: false
+    #    fetch-registry: false
+
+spring:
+  application:
+    name: skyparams
+server:
+  port: 8081
+params:
+  path:
+    folder: institutions/
+token:
+  path:
+    file: token.conf

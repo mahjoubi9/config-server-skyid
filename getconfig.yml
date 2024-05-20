@@ -1,0 +1,61 @@
+eureka:
+  instance:
+    hostname: localhost
+    port: 8761
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+#    register-with-eureka: false
+    #    fetch-registry: false
+
+spring:
+  application:
+    name: getconfig
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:h2:file:./camunda-h2-database
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+server:
+  port: 8050
+params:
+  path:
+    folder: /opt/getConfig/
+token:
+  path:
+    file: config.json
+ms:
+  extract:
+    info:
+      host: 192.168.1.72
+      port: 5002
+  align:
+    image:
+      host: 192.168.1.27
+      port: 5000
+embedding:
+  url: http://demo.skyidentification.com:8501/v1/models/adaface:predict
+
+camunda:
+  bpm:
+    metrics:
+      enabled: false
+      db-reporter-activate: false
+    admin-user:
+      id: demo
+      password: demo
+
+
+
+keycloak:
+  realm: skyidv2
+  auth-server-url: https://skyanalytics.indatacore.com:8180/
+  ssl-required: none
+  resource: skyidv2
+  credentials:
+    secret: gm8ETf5Zo6CuIB39CvzNAvalPXvjRsTv
+  use-resource-role-mappings: true
+  bearer-only: true

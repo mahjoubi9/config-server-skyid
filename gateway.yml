@@ -1,0 +1,214 @@
+#eureka:
+#  instance:
+#    hostname: localhost
+#    port: 8761
+#  client:
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+#    #    register-with-eureka: false
+#    #    fetchRegistry: false
+#server:
+#  port: 8222
+#  # Configuration Keycloak
+#
+#client-id: analyseDocument
+#client-secret: gm8ETf5Zo6CuIB39CvzNAvalPXvjRsTv
+#token-uri: https://skyanalytics.indatacore.com:8180/realms/skyidv2/protocol/openid-connect/token
+#
+#
+#spring:
+#  application:
+#    name: gateway
+#  main:
+#    web-application-type: reactive
+#    allow-bean-definition-overriding: true
+#    # Configuration Eureka
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          keycloak:
+#            provider: keycloak
+#            client-id: skyidv2
+#            client-secret: gm8ETf5Zo6CuIB39CvzNAvalPXvjRsTv
+#            authorization-grant-type: credentials_client
+#            redirect-uri: https://skyanalytics.indatacore.com:8180/login/oauth2/code/keycloak
+#            scope: openid
+#        provider:
+#          keycloak:
+#            authorization-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/auth
+#            token-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/token
+#            user-info-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/userinfo
+#            jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
+#            user-name-attribute: name
+#            user-info-authentication-method: header
+#      resourceserver:
+#        jwt:
+#          jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
+#
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: analyse-document
+#          uri: http://localhost:8050
+#          predicates:
+#            - Path=/analyse
+#
+#        - id: getParameter
+#          uri: http://localhost:8078
+#          predicates:
+#            - Path=/get_parameters
+#
+#management:
+#  tracing:
+#    sampling:
+#      probability: 1.0
+#token:
+#  config:
+#    path: /home/saadan/Documents/SkyId/share_conf/token.conf
+#
+#scope:
+#  config:
+#    path: /home/saadan/Documents/SkyId/share_conf/analyse-document/analyse-document/scope.json
+#
+#alignImage:
+#  config:
+#    path: /home/saadan/Documents/SkyId/share_conf/analyse-document/analyse-document/align_image.json
+#
+#ocr:
+#  config:
+#    path: /home/saadan/Documents/SkyId/share_conf/analyse-document/analyse-document/ocr.json
+#
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        cloud:
+#          gateway: TRACE
+#
+#keycloak-client:
+#  server-url: https://skyanalytics.indatacore.com:8180
+#  realm: skyidv2
+#
+#
+#keycloak:
+#  realm: skyidv2
+#  auth-server-url: https://skyanalytics.indatacore.com:8180
+#  ssl-required: none
+#  resource: skyidv2
+#  credentials:
+#    secret: gm8ETf5Zo6CuIB39CvzNAvalPXvjRsTv
+#  use-resource-role-mappings: true
+#  bearer-only: true
+#
+## Configuration Keycloak
+eureka:
+  instance:
+    hostname: "{cipher}94aceec60f89579734f2bd23ec32fbac057d221bde37439992369012664f4cfc"
+    port: "{cipher}45e31f2d719db91f5033543259b78fc466189f13924706c9a5655edf542ba562"
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+    #    register-with-eureka: false
+    #    fetchRegistry: false
+server:
+  port: "{cipher}0821f6072e00e520fdb81504d2047be8bb5ef8b6f340e89baaa43d6b05c45f4e"
+  # Configuration Keycloak
+
+client-id: "{cipher}79e5ce0105dc1b46d7896064089dddc39e4d0371ced9d278afb26809c8fd768a"
+client-secret: "{cipher}0519e537ec6890d767b556f032d401b0f5d15be1e99114b45366234227186c59ed1200b47d30feeaf41189574f113cdcb33c1667e7801920f5e3bb16fe046b78"
+token-uri: "{cipher}b2c23ec835d03ba928c3829439f46d7b23ee6503ce6b663913ccc6bd20ea0e8eeeeb93733a6c88d7a1edf8736039e2c96f3a666af64e6229cbd6540b242ed048d1323bec90ed9868a392b509a896200f5380b76126fd57006154ccc89bfa89330873beb05a66f9ffde19c81c628822dc"
+
+
+spring:
+  application:
+    name: gateway
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+    # Configuration Eureka
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            provider: "{cipher}3c485406007906e623f72d68237f854f5c26de4cf25f227333bdd738d454d120"
+            client-id: "{cipher}d1e0297727ee8fc4b150f7851a0e834bd19245060585ec62f02fc8fd58d0b1fd"
+            client-secret: "{cipher}902d4f7dd5ae4633021ca4ae8cf747bb2afec25766da7cba41abc1eb686d70efef43890d5c566ba64ae8327c763d6adb99b41c2249a4877c3b32fe85d20a807f"
+            authorization-grant-type: "{cipher}4c2340d7b4a1f60df2ca6ba30682621e7afb1f446f38d0a97b83a572fa8cc24d71a0a4bf52b5cd247c1b818a8a4deb00"
+            redirect-uri: "{cipher}fcfcdbe7953cb4cecfa54087b14845cebe9bd4a3b9746969792ff57282ab60b1f80d8d8d2d19aa447735b94fb94e20a21943a5fc09a6ac654391f72c8c683cee526061426b1954b511f7fe072ad359bd1d239e5962b567afa57fd448b62891ab"
+            scope: "{cipher}f9db4676861c4492ec9d2565a3fce6fcffee657ef385d59b66afb71697e4c8d3"
+        provider:
+          keycloak:
+            authorization-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/auth
+            token-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/token
+            user-info-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/userinfo
+            jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
+            user-name-attribute: name
+            user-info-authentication-method: header
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: analyse-document
+          uri: http://localhost:8050
+          predicates:
+            - Path=/analyse
+
+        - id: getParameter
+          uri: http://localhost:8078
+          predicates:
+            - Path=/get_parameters
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+token:
+  config:
+    path: "/home/saadan/Documents/SkyId/share_conf/token.conf"
+
+scope:
+  config:
+    path: /home/saadan/Documents/SkyId/share_conf/analyse-document/analyse-document/scope.json
+
+alignImage:
+  config:
+    path: /home/saadan/Documents/SkyId/share_conf/analyse-document/analyse-document/align_image.json
+
+ocr:
+  config:
+    path: /home/saadan/Documents/SkyId/share_conf/analyse-document/analyse-document/ocr.json
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+
+keycloak-client:
+  server-url: "{cipher}f27e6d2f6a1ea104929195fe35674341fa1a90cb56fda9dc0b0435c4565a27b20a78b3f9f3ed68d8f29c9131836f6f791fa25c286c86ae3076f5f47a54006213"
+  realm: "{cipher}f64b5bafbdef2dae56ff1e47a8741ffaaa55dedc9986e6beefd4d8d4a1658641"
+
+
+keycloak:
+  realm: "{cipher}f64b5bafbdef2dae56ff1e47a8741ffaaa55dedc9986e6beefd4d8d4a1658641"
+  auth-server-url: "{cipher}79b5f3fe4bc1d7dee5caf1bb6265f27f9b93cf07233d4b62ce7fa9d9817c1526b639f6a8bf9e7bc269868eb83c8bab4714b8a7d7890719fe955cfccdbb3b676f"
+  ssl-required: "{cipher}40e3ea3176a6b9638e8399bc8eb4dbb0152b8f2d03ffbdbd05f1454e78609372"
+  resource: "{cipher}f64b5bafbdef2dae56ff1e47a8741ffaaa55dedc9986e6beefd4d8d4a1658641"
+  credentials:
+    secret: "{cipher}590070de981aed3688083b91d10fd14d3b0cad8dd2871bdc415578fb369f4e2b58b1c297fb746c4ce9661de24e07aa4ebaae348764a359ef1faf5c4cfb8733c8"
+  use-resource-role-mappings: true
+  bearer-only: true
+
+# Configuration Keycloak
